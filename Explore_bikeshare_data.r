@@ -9,6 +9,7 @@ head(wash)
 
 head(chi)
 
+#Specifying the libraries to be used
 library(tidyverse)
 
 remove_NA = function(df)
@@ -47,7 +48,7 @@ ggplot(data=ny_final, mapping=aes(x=User.Type, fill=User.Type))+
 
 total_ny <- aggregate(Duration_hr ~ User.Type, ny_final, function(x) sum(as.numeric(x)))
 total_ny
-                          
+
 ggplot(data=total_ny, mapping=aes(x=User.Type, y=Duration_hr, fill=User.Type))+
     geom_bar(stat="identity", color='black')+
     xlab('User Type')+ylab('Total travel duration (in hours)')
@@ -60,7 +61,7 @@ ggplot(data=wash_final, mapping=aes(x=User.Type, fill=User.Type))+
 
 total_wash <- aggregate(Duration_hr ~ User.Type, wash_final, function(x) sum(as.numeric(x)))
 total_wash
-                             
+
 ggplot(data=total_wash, mapping=aes(x=User.Type, y=Duration_hr, fill=User.Type))+
     geom_bar(stat="identity", color='black')+
     xlab('User Type')+ylab('Total travel duration (in hours)')
@@ -73,8 +74,8 @@ ggplot(data=chi_final, mapping=aes(x=User.Type, fill=User.Type))+
 
 total_chi <- aggregate(Duration_hr ~ User.Type, chi_final, function(x) sum(as.numeric(x)))
 total_chi
-                          
-   
+
+
 ggplot(data=total_chi, mapping=aes(x=User.Type, y=Duration_hr, fill=User.Type))+
     geom_bar(stat="identity", color='black')+
     xlab('User Type')+ylab('Total travel duration (in hours)')
@@ -88,7 +89,7 @@ ggplot(data=ny_final, mapping=aes(x=User.Type, fill=User.Type))+
 
 avg_ny <- aggregate(Duration_min ~ User.Type, ny_final, function(x) mean(as.numeric(x)))
 avg_ny
-                        
+
 ggplot(data=avg_ny, mapping=aes(x=User.Type, y=Duration_min, fill=User.Type))+
     geom_bar(stat="identity", color='black')+
     xlab('User Type')+ylab('Average travel duration (in minutes)')
@@ -102,7 +103,7 @@ ggplot(data=wash_final, mapping=aes(x=User.Type, fill=User.Type))+
 
 avg_wash <- aggregate(Duration_min ~ User.Type, wash_final, function(x) mean(as.numeric(x)))
 avg_wash
-                        
+
 ggplot(data=avg_wash, mapping=aes(x=User.Type, y=Duration_min, fill=User.Type))+
     geom_bar(stat="identity", color='black')+
     xlab('User Type')+ylab('Average travel duration (in minutes)')
@@ -116,7 +117,7 @@ ggplot(data=chi_final, mapping=aes(x=User.Type, fill=User.Type))+
 
 avg_chi <- aggregate(Duration_min ~ User.Type, chi_final, function(x) mean(as.numeric(x)))
 avg_chi
-                        
+
 ggplot(data=avg_chi, mapping=aes(x=User.Type, y=Duration_min, fill=User.Type))+
     geom_bar(stat="identity", color='black')+
     xlab('User Type')+ylab('Average travel duration (in minutes)')
@@ -135,7 +136,7 @@ ggplot(data=ny_final, mapping=aes(x=Gender, fill=Gender))+
 
 total_ny_gen <- aggregate(Duration_hr ~ Gender, ny_final, function(x) sum(as.numeric(x)))
 total_ny_gen
-                          
+
 ggplot(data=ny_final, mapping=aes(x=User.Type, y=Duration_hr, fill=Gender))+
     geom_histogram(stat="identity")+
     facet_wrap(~Gender)+
@@ -143,8 +144,8 @@ ggplot(data=ny_final, mapping=aes(x=User.Type, y=Duration_hr, fill=Gender))+
 
 avg_ny_gen <- aggregate(Duration_min ~ Gender, ny_final, function(x) mean(as.numeric(x)))
 avg_ny_gen
-                        
-                                
+
+
 ggplot(data=ny_final, mapping=aes(x=User.Type, y=Duration_min, fill=Gender))+
     geom_histogram(stat="identity")+
     facet_wrap(~Gender)+
@@ -158,7 +159,7 @@ ggplot(data=chi_final, mapping=aes(x=Gender, fill=Gender))+
 
 total_chi_gen <- aggregate(Duration_hr ~ Gender, chi_final, function(x) sum(as.numeric(x)))
 total_chi_gen
-                          
+
 ggplot(data=chi_final, mapping=aes(x=User.Type, y=Duration_hr, fill=Gender))+
     geom_histogram(stat="identity")+
     facet_wrap(~Gender)+
@@ -166,8 +167,8 @@ ggplot(data=chi_final, mapping=aes(x=User.Type, y=Duration_hr, fill=Gender))+
 
 avg_chi_gen <- aggregate(Duration_min ~ Gender, chi_final, function(x) mean(as.numeric(x)))
 avg_chi_gen
-                        
-                                
+
+
 ggplot(data=chi_final, mapping=aes(x=User.Type, y=Duration_min, fill=Gender))+
     geom_histogram(stat="identity")+
     facet_wrap(~Gender)+
