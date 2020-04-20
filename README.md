@@ -1,6 +1,6 @@
 ### Date created
 1. Project created on 16 April 2020.
-2. README file created on 20 April 2020.
+2. README.md created on 20 April 2020.
 
 ### Project Title
 Explore Bikeshare Data using R
