@@ -9,8 +9,10 @@ head(wash)
 
 head(chi)
 
+#Specifying the libraries to be used
 library(tidyverse)
 
+#removing NA from dataset
 remove_NA = function(df)
     {
     df = na.omit(df[,])
@@ -23,6 +25,7 @@ remove_NA(wash)
 
 remove_NA(chi)
 
+#Creating new columns
 ny$Duration_min <- ny$Trip.Duration/60
 ny$Duration_hr <- ny$Trip.Duration/3600
 
