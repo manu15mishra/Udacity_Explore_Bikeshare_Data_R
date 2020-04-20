@@ -12,6 +12,7 @@ head(chi)
 #Specifying the libraries to be used
 library(tidyverse)
 
+#removing NA from dataset
 remove_NA = function(df)
     {
     df = na.omit(df[,])
