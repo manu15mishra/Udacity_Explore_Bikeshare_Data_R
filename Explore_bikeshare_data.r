@@ -24,6 +24,7 @@ remove_NA(wash)
 
 remove_NA(chi)
 
+#Creating new columns
 ny$Duration_min <- ny$Trip.Duration/60
 ny$Duration_hr <- ny$Trip.Duration/3600
 
