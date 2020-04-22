@@ -6,6 +6,8 @@
 Explore Bikeshare Data using R
 
 ### Description
+This project is part of Udacity's nanodegree offering named "Programming for Data Science with R Nanodegree Program".
+
 In this project, R is used to explore data related to bike sharing system for three major cities in United States:
 New York City, Washington and Chicago.
 
